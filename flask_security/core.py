@@ -55,6 +55,7 @@ _default_config = {
     'RESET_PASSWORD_WITHIN': '5 days',
     'LOGIN_WITHOUT_CONFIRMATION': False,
     'EMAIL_SENDER': 'no-reply@localhost',
+    'SEND_REGISTRATION_EMAIL': False,
     'TOKEN_AUTHENTICATION_KEY': 'auth_token',
     'TOKEN_AUTHENTICATION_HEADER': 'Authentication-Token',
     'CONFIRM_SALT': 'confirm-salt',

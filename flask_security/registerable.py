@@ -35,7 +35,8 @@ def register_user(**kwargs):
     user_registered.send(dict(user=user, confirm_token=token),
                          app=app._get_current_object())
 
-    send_mail('Welcome', user.email, 'welcome',
+    if app.config['SEND_REGISTRATION_EMAIL']:
+        send_mail('Welcome', user.email, 'welcome',
               user=user, confirmation_link=confirmation_link)
 
     return user
